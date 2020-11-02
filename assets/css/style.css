@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+ul li{
+    list-style: none;
+}
+
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.container-fluid{
+    width: 100%;
+}
+header.menu_header {
+    width: 100%;
+    position: absolute;
+    background-color: transparent;
+    z-index: 9999;
+    top: 0;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding: 5rem 3rem;
+    color: white;
+}
+.menu .menu_logo{
+    flex: 1;
+}
+
+.menu .menu_list {
+    display: flex;
+    position: relative;
+}
+
+.menu .menu_list li.list--items {
+    list-style: none;
+    
+}
+.menu .menu_list li.list--items:hover .items--hover{
+    display: block;
+}
+.menu .menu_list .items--hover li{
+    background-color: white;
+    color: black;
+    padding: 1.3rem 8rem 1.3rem 1.3rem;
+    font-weight: 600;
+}
+.menu .menu_list .items--hover{
+    position: absolute;
+    display: none;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    padding-top: 4rem;
+}
+.menu .menu_list .items--hover li:hover {
+    background: #ffe5ed;
+    color: #f9004d;
+}
+.menu .menu_list .list--items a {
+    text-decoration: none;
+    padding: 2rem 2rem;
+    font-size: 1.7rem;
+    color: white;
+}
+.menu .menu_list a:hover {
+    color: #f9004d;
+}
+.menu .btn_menu button {
+    padding: 2rem;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    position: relative;
+}
+.menu .btn_menu{
+    transition: 0.3s;
+}
+
+.menu .btn_menu button:hover{
+    background-color: #f9004d;
+    transition: 0.3s;
+    border: 2px solid #f9004d;
+}
+.menu .btn_menu:hover{
+    transform: translateY(-20%);
+}
+.banner{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-image: url(../img/bg-image-3-overlay.jpg);
+}
+.banner .banner-content{
+    text-align: center;
+    padding: 3rem;
+}
+.banner .banner-content h1{
+    color: red;
+    font-size: 10rem;
+    font-weight: 800;
+}
+.banner .banner-content .banner__text{
+    color: rgb(212, 212, 212);
+    font-size: 3rem;
+    padding: 0 15rem 3rem 15rem;
+}
+.banner .banner-content .banner__btn button{
+    color: rgb(212, 212, 212);
+    background-color: transparent;
+    padding: 2rem;
+    font-size: 1.5rem;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+/* business */
+.business{
+    width: 100%;
+}
+.business .container-fluid{
+    padding: 0 5rem;
+}
+.business .business_content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.business .business_content .business__product{
+    max-width: calc(100%/3);
+    flex-wrap: calc(100%/3);
+    padding: 1rem;
+}
+.business .business_content .business-cart{
+    margin-top: 4rem;
+    padding: 7.4rem 5rem;
+    border-radius: 0.6rem;
+    background-color: #ffeeee;
+}
+.business .business_content .business-cart:hover{
+    background-image: linear-gradient(90deg,red,rgb(255, 0, 140));
+    transform: translateY(-7%);
+    transition: 350ms;
+    color: white;
+}
+.business .business_content .business--items{
+    padding-right: 2rem;
+}
+.business .business_content .business--items svg{
+    font-size: 5rem;
+    color: red;
+}
+.business .business_content .business--items h2{
+    font-size: 2rem;
+    padding: 2rem 0;
+    color: rgb(59, 59, 59);
+}
+.business .business_content .business--items p{
+    font-size: 2rem;
+    color: rgb(59, 59, 59);
+}
+.business .business_content .business-cart:hover svg,
+.business .business_content .business-cart:hover h2,
+.business .business_content .business-cart:hover p {
+    color: white;
+}
+/* Our Portfolio   */
+.portfolio{
+    background-color: rgba(240, 240, 240, 0.527);
+    padding: 7.5rem 0;
+}
+.portfolio .container-fluid{
+    padding: 0 5rem;
+}
+.portfolio .portfolio__title{
+    max-width: 50%;
+    padding-bottom: 5rem;
+}
+.portfolio .portfolio__title h1{
+    font-size: 6rem;
+}
+.portfolio .portfolio__title .title-info{
+    font-size: 2rem;
+}
+.portfolio .portfolio__product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio .portfolio-card{
+    padding: 1.5rem;
+}
+.portfolio .portfolio-card .portolio__img img{
+    display: block;
+    width: 460px;
+}
+.portfolio .portfolio-card .portolio__img{
+    position: relative;
+    transition: ease-out 250ms;
+}
+.portfolio .portfolio-card .portolio__img:hover{
+    transform: scale(1.05);
+}
+.portfolio .portfolio-card .overlay{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 0.7rem;
+   transition: ease-out 200ms;
+}
+.portfolio .portfolio-card .overlay:hover{
+    background-image: linear-gradient(180deg, rgba(255, 0, 0, 0.836), rgba(255, 0, 140, 0.199));
+
+}
+.portfolio .portfolio-card .overlay{
+    display: flex;
+    align-items: flex-end;
+}
+.portfolio .overlay .overlay--info{
+    color: white;
+    padding-bottom: 4rem;
+    padding-left: 4rem;
+}
+.portfolio .overlay .overlay--info h4{
+    font-size: 1.4rem;
+    padding: 1rem 0;
+}
+.portfolio .overlay .overlay--info h2{
+    font-size: 2rem;
+    padding: 0.7rem;
+}
+.portfolio .overlay .overlay--info .overlay-btn{
+    padding: 0.7rem;
+}
+.portfolio .overlay .overlay--info .overlay-btn button{
+    padding: 1rem 1.7rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.portfolio .overlay .overlay--info .overlay-btn button:hover{
+    background-color: #f9004d;
+}
